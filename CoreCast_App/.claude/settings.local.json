@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sort find:*)",
+      "Bash(git config:*)",
+      "Bash(./gradlew assembleDebug)",
+      "Bash(where java:*)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files/Android/Android Studio/jbr/**)",
+      "Read(//c/Program Files/Android/Android Studio/**)",
+      "Bash(export JAVA_HOME=\"C:/Program Files/Android/Android Studio/jbr\")"
+    ]
+  }
+}

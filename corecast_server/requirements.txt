@@ -1,0 +1,6 @@
+fastapi==0.115.6
+uvicorn[standard]==0.30.6
+SQLAlchemy==2.0.36
+PyMySQL==1.1.1
+python-dotenv==1.0.1
+paho-mqtt==1.6.1

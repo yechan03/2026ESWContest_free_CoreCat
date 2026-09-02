@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_device_list"
+        android:icon="@drawable/ic_home"
+        android:title="기기 상태" />
+    <item
+        android:id="@+id/nav_system_health"
+        android:icon="@drawable/ic_bar_chart"
+        android:title="전체 현황" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="설정" />
+</menu>

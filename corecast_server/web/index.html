@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IN-GPS</title>
+  <link rel="icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="appbar">
+    <img src="logo.svg" alt="IN-GPS">
+    <span class="title">IN-GPS</span>
+    <span class="user" id="user-label"></span>
+    <button class="btn-logout" id="logout-btn">로그아웃</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>센서 데이터 CSV 다운로드</h2>
+      <p class="desc">
+        Android 앱이 받는 것과 동일한 센서 데이터(ADXL335 진동 X·Y·Z, Thermistor 2개)를
+        최대 1,000개, 시간순으로 CSV 파일로 내려받습니다.
+      </p>
+
+      <label for="device-select">디바이스</label>
+      <select id="device-select">
+        <option value="">전체 디바이스</option>
+      </select>
+
+      <button type="button" class="btn" id="download-btn">CSV 다운로드</button>
+      <p class="hint">최신 1,000개를 시간 오름차순(오래된 → 최신)으로 정렬해 받습니다.</p>
+      <div class="msg" id="msg"></div>
+    </section>
+
+    <section class="card">
+      <h2>게이트웨이 상태 로그 (Gateway Health)</h2>
+      <p class="desc">
+        게이트웨이(STM32)가 재시작 직후 보내는 crash_report를 조회합니다.
+        직전 실행의 초기화·MQTT 연결 결과, publish/실패 횟수, 가동 시간을 확인할 수 있습니다.
+      </p>
+
+      <button type="button" class="btn" id="gwhealth-btn">Gateway Health 로그 보기</button>
+      <div class="msg" id="gwhealth-msg"></div>
+      <div class="table-wrap" id="gwhealth-table"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>INGPS.initDashboard();</script>
+</body>
+</html>

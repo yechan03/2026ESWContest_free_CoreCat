@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 · IN-GPS</title>
+  <link rel="icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <form class="auth-card" id="signup-form">
+      <div class="brand">
+        <img src="logo.svg" alt="IN-GPS">
+        <h1>IN-GPS</h1>
+        <p>회원가입</p>
+      </div>
+
+      <label for="username">아이디 <span style="color:#9AA0A6">(3자 이상)</span></label>
+      <input type="text" id="username" autocomplete="username" required minlength="3">
+
+      <label for="password">비밀번호 <span style="color:#9AA0A6">(8자 이상)</span></label>
+      <input type="password" id="password" autocomplete="new-password" required minlength="8">
+
+      <button type="submit" class="btn" id="submit-btn">회원가입</button>
+      <div class="msg" id="msg"></div>
+
+      <div class="switch-link">
+        이미 계정이 있으신가요? <a href="login.html">로그인</a>
+      </div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+  <script>INGPS.initSignup();</script>
+</body>
+</html>

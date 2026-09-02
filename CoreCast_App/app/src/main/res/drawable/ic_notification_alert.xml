@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    알림 small icon 전용 벡터 (경고 삼각형 + 느낌표).
+
+    API 21+ 는 small icon 을 알파 채널만 남기고 시스템 색으로 마스킹한다.
+    따라서 컬러 드로어블을 그대로 쓰면 불투명 영역이 통째로 흰 사각형이 된다.
+    이 아이콘은 "그려질 부분만 불투명, 나머지는 완전 투명"이 되도록 만들었다.
+
+    fillType="evenOdd" 필수: 느낌표 두 조각을 삼각형과 같은 path 의 subpath 로 두고
+    구멍으로 뚫는다. 기본값인 nonZero 면 subpath 감기 방향이 같아 구멍이 나지 않고
+    삼각형이 통째로 메워진다.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M12,2L1,21H23L12,2ZM11,9H13V15H11V9ZM11,16.5H13V18.5H11V16.5Z" />
+</vector>

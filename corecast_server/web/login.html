@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 · IN-GPS</title>
+  <link rel="icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <form class="auth-card" id="login-form">
+      <div class="brand">
+        <img src="logo.svg" alt="IN-GPS">
+        <h1>IN-GPS</h1>
+        <p>로그인</p>
+      </div>
+
+      <label for="username">아이디</label>
+      <input type="text" id="username" autocomplete="username" required>
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" autocomplete="current-password" required>
+
+      <button type="submit" class="btn" id="submit-btn">로그인</button>
+      <div class="msg" id="msg"></div>
+
+      <div class="switch-link">
+        계정이 없으신가요? <a href="signup.html">회원가입</a>
+      </div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+  <script>INGPS.initLogin();</script>
+</body>
+</html>
