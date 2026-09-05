@@ -7,7 +7,7 @@
 ## 기능
 
 - [센서 노드 펌웨어 (ESP32-S3)](corecast_project/README.md) — 온도(AS6221)·진동(ADXL345) 측정, BLE 광고
-- [게이트웨이 (STM32WBA52)](corecast_gateway) — BLE 스캔 및 MQTT 발행
+- [게이트웨이 (STM32WBA52)](corecast_gateway/README.md) — BLE 스캔 및 MQTT 발행
 - [서버 (FastAPI · AWS EC2)](corecast_server/README.md) — 데이터 수집·적재, REST API 제공
 - [모바일 앱 (Android)](CoreCast_App/README.md) — 실시간·기간별 센서 데이터 시각화
 - [ML 모델 검증](ml_validation/README.md) — 센서 데이터 기반 모델 학습·검증, 펌웨어 반영용 export
