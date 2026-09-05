@@ -1,6 +1,6 @@
-# IN_GPS Mobile (Android)
+# Mobile (Android)
 
-써미스터(NTC) 온도와 ADXL335 진동(RMS)을 실시간·기간별로 확인하는 Android 모니터링 앱입니다. (Android OS only)
+써미스터(NTC) 온도와 ADXL345 진동(RMS)을 실시간·기간별로 확인하는 Android 모니터링 앱입니다. (Android OS only)
 
 서버가 수집한 디바이스 센서 데이터를 REST API로 폴링(polling)하여, 실시간 상세 차트와 기간별 집계 차트(일/주/월/년, 캘린더 기간)로 시각화합니다.
 

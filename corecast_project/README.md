@@ -1,6 +1,6 @@
-# IN-GPS (Firmware, ESP32-S3) — rev 4.0
+# Firmware, ESP32-S3 — rev 4.0
 
-산업 설비의 온도·진동을 상시 감시해 화재를 예방하는 IN-GPS 시스템의 센서 노드 펌웨어입니다. AS6221(I2C 디지털 온도) 2채널과 ADXL345(I2C 가속도) 3축을 읽어 BLE Manufacturer Specific Data로 광고하고, STM32 Gateway가 스캔해 MQTT로 서버에 전달합니다.
+산업 설비의 온도·진동을 상시 감시해 화재를 예방하는 시스템의 센서 노드 펌웨어입니다. AS6221(I2C 디지털 온도) 2채널과 ADXL345(I2C 가속도) 3축을 읽어 BLE Manufacturer Specific Data로 광고하고, STM32 Gateway가 스캔해 MQTT로 서버에 전달합니다.
 
 > **rev 4.0에서 아날로그 경로(ULP + NTC 서미스터 + ADXL335)가 전량 폐기되고 단일 I2C 버스(AS6221 + ADXL345) 로 대체되었습니다.** ULP RISC-V 코어, `ulp/` 디렉터리, ADC 캘리브레이션 기반 온도 변환은 더 이상 사용하지 않습니다(과거 아날로그 버전은 `Analog_1.0.0_ver` 브랜치 참조).
 
@@ -178,14 +178,8 @@ idf.py -p (PORT) flash monitor
 
 ---
 
-## 알려진 미완/실험 항목
-
-- `sensor/shf_core_model.h`: PINN 기반 코어 온도 예측 모델이 삽입되어 있으나 **`app_main.c`에서 아직 호출되지 않습니다**(미연동). 벤치 데이터로만 검증(MAE 0.508°C), 실제 하드웨어/타겟 미검증 표기가 파일 헤더에 있습니다.
-- `adv_manager_enter_storage()`: 보관 모드(딥슬립 7µA) API는 구현되어 있으나 호출 경로 없음 — 향후 버튼/설정 채널용.
-- ADXL345는 딥슬립 중에도 measure 모드로 전류를 소모합니다(전원 게이팅 회로 없음, INT 미접속이라 소프트웨어로만 절전 가능 — `adxl345_test_force_standby()`).
 
 ## Branch 안내
 
-- `main`: 최신 안정 버전
-- `digitalVer`: rev 4.0 I2C 전환(AS6221 + ADXL345, ULP 제거) — 이 README가 기술하는 아키텍처
-- `Analog_1.0.0_ver`: 구 아날로그 경로(ULP + NTC + ADXL335) 최종본, 참고용 보존
+- `mater`: 최신 안정 버전
+- `Analog`: 구 아날로그 경로(ULP + NTC + ADXL335) 최종본, 참고용 보존
